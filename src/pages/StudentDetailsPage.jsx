@@ -9,7 +9,7 @@ function StudentDetailsPage() {
   const paramsDinamicos = useParams()
   console.log(paramsDinamicos);
   const studentProfile = studentsData.find(
-    (student) => student._id === paramsDinamicos.studentId
+    (student) => Number(student._id) === Number(paramsDinamicos.studentId)
   );
 
   return (
